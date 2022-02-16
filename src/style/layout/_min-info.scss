@@ -1,0 +1,8 @@
+.min-info {
+  width: 30%;
+  background-color: lighten($back-color1, 5%);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}

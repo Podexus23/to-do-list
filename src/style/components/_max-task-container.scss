@@ -1,0 +1,22 @@
+.max-task_container {
+  border: 1px solid yellow;
+  padding: 10px;
+  background-color: lighten($back-color1, 3%);
+  cursor: pointer;
+}
+
+.max-task_container:hover .max-title {
+  text-decoration: underline;
+}
+
+.max-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.max-description {
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,13 @@
+//variables
+@import './abstract/variables';
+//base
+@import './base/base';
+//components
+@import './components/min-task-container';
+@import './components/max-task-container';
+//layout
+@import './layout/header';
+@import './layout/main';
+@import './layout/footer';
+@import './layout/min-info';
+@import './layout/max-info';

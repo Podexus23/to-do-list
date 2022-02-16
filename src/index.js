@@ -1,3 +1,3 @@
-import './style';
+import './style/main';
 
 console.log('hi')
