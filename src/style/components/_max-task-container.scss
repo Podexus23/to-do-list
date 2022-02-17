@@ -2,11 +2,6 @@
   border: 1px solid yellow;
   padding: 10px;
   background-color: lighten($back-color1, 3%);
-  cursor: pointer;
-}
-
-.max-task_container:hover .max-title {
-  text-decoration: underline;
 }
 
 .max-title {
@@ -19,4 +14,96 @@
   padding-top: 5px;
   display: flex;
   justify-content: space-between;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  input[type='text'],
+  input[type='date'],
+  textarea {
+    background-color: lighten($back-color1, 10%);
+    border-radius: 5px;
+    border: none;
+    padding-left: 5px;
+  }
+
+  input[type='text']:focus-visible,
+  input[type='date']:focus-visible,
+  textarea:focus-visible {
+    outline-color: $back-color1;
+  }
+
+  #task-title {
+    width: 100%;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  #task-description {
+    width: 100%;
+    font-family: "Helvetica",
+      "Arial",
+      sans-serif;
+    min-height: 150px;
+    resize: none;
+    line-height: 1.2rem;
+    font-size: 1rem;
+  }
+
+  #task-date {
+    text-align: center;
+  }
+
+  .radio-wrapper {
+    margin-left: 10px;
+
+
+    input[type='radio'] {
+      display: none;
+    }
+
+    label {
+      padding: 2px 5px;
+      background: lighten($back-color1, 10%);
+      border: 1px solid $back-color1;
+      border-radius: 5px;
+    }
+
+    input:checked+label {
+      border: 1px solid green;
+    }
+  }
+}
+
+.task-options {
+  display: flex;
+  column-gap: 10px;
+  flex-wrap: wrap;
+}
+
+.task-priority {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.task-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  label {
+    padding-bottom: 5px;
+  }
+}
+
+.task-todos {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  align-items: flex-start;
 }

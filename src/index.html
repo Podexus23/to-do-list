@@ -44,16 +44,49 @@
     </aside>
     <section class="max-info">
       <div class="max-task_container" data-id="1">
-        <h3 class="max-title title">title, description, dueDate and priority. You might also want to include notes
-          or
-          even a checklist.</h3>
-        <div class="min-description">
-          <div class="min-priority">maximum</div>
-          <div class="min-date">00.00.00</div>
-          <button class="min-delete">remove</button>
-        </div>
+        <form method="get" name="task" class="form-container">
+          <label for="task-title" class="task-title">
+            <input type="text" name="title" id="task-title" placeholder="Task name">
+          </label>
+          <label for="task-description" class="task-description">
+            <textarea name="description" id="task-description" placeholder="Description"></textarea>
+          </label>
+          <div class="task-todos">
+            <label for="todo"><input type="checkbox" name="task-todo" id="todo">
+              <span class="todo-title">Some important thing</span>
+            </label>
+            <label for="todo"><input type="checkbox" name="task-todo" id="todo">
+              <span class="todo-title">Another important thing</span>
+            </label>
+            <button type="button" class="add-todo">Add checklist</button>
+          </div>
+          <div class="task-options">
+            <fieldset class="task-priority">
+              <legend>Priority</legend>
+              <div class="radio-wrapper">
+                <input type="radio" name="priority" id="low-priority" value="low">
+                <label for="low-priority">low</label>
+              </div>
+              <div class="radio-wrapper">
+                <input type="radio" name="priority" id="medium-priority" value="medium" checked>
+                <label for="medium-priority">medium</label>
+              </div>
+              <div class="radio-wrapper">
+                <input type="radio" name="priority" id="high-priority" value="high">
+                <label for="high-priority">high</label>
+              </div>
+            </fieldset>
+            <div class="task-date">
+              <label for="task-date">Date</label>
+              <input type="date" name="date" id="task-date">
+            </div>
+          </div>
+          <div class='task-add-remove'>
+            <button type="button">Submit</button>
+            <button type="button">Remove</button>
+          </div>
+        </form>
       </div>
-
     </section>
   </main>
   <footer class="footer">
