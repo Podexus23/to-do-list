@@ -6,7 +6,7 @@
  */
 let createBlock = (function (tag, selector, props) {
   let block = document.createElement(tag);
-  block.classList.add(selector);
+  if(selector)block.classList.add(selector);
   if (props) {
     let {
       text,
@@ -18,7 +18,9 @@ let createBlock = (function (tag, selector, props) {
     if (source) block.src = source;
     if (data) block.dataset[data[0]] = data[1];
     if (atr) {
-      block.setAttribute(atr[0], atr[1]);
+      for(let key in atr){
+        block.setAttribute(key, atr[key]);
+      }
     }
   }
   return block
