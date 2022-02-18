@@ -35,6 +35,11 @@ let createForm = (function(){
       <textarea class="todo-title" value="Some important thing" ></textarea>
       <button type="button" class="remove-todo">x</button>
     </div>
+    <div class="todo-container">
+      <input type="checkbox" name="task-todo" id="todo">
+      <textarea class="todo-title" value="Some important thing" ></textarea>
+      <button type="button" class="remove-todo">x</button>
+    </div>
     <button type="button" class="add-todo">Add checklist</button>
     `;
     return todos
@@ -69,7 +74,7 @@ let createForm = (function(){
   function createControlButtons(){
     const buttons = createBlock('div', 'task-add-remove');
     buttons.innerHTML = `
-    <button type="button">Submit</button>
+    <button type="button" class="button-add">Submit</button>
     <button type="button">Remove</button>
     <button type="button">Complete</button>
     `;
