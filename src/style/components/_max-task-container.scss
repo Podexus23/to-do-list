@@ -107,3 +107,44 @@
   row-gap: 5px;
   align-items: flex-start;
 }
+
+.todo-container{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.todo-title{
+  font-family: "Helvetica",
+      "Arial",
+      sans-serif;
+  font-size: 1rem;
+  margin-right: 10px;
+  margin-left: 5px;
+  padding: 4px 5px 0px;
+  // overflow: hidden;
+  resize: none;
+  height: 1.5rem;
+  max-height: 100px;
+  width: 100%;
+}
+
+.remove-todo{
+  background-color: darken($back-color1, 20%);
+  border: 1px solid darken($back-color1, 10%);
+  padding: 0px 5px 1px;
+  border-radius: 5px;
+  color: lighten($back-color1, 20%);
+  cursor: pointer;
+  transition: background-color .2s;
+}
+
+.remove-todo:hover{
+  background-color: darken($back-color1, 10%);
+  border: 1px solid darken($back-color1, 20%);
+}
+
+.remove-todo:active{
+  background-color: darken($back-color1, 20%);
+  border: 1px solid darken($back-color1, 20%);
+}
